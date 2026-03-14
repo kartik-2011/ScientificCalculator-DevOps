@@ -25,7 +25,7 @@ pipeline {
             }
         }
 
-        stage('Build the Docker Image') {
+        stage('Build Docker Image') {
             steps {
                 sh 'docker build -t kaali2011/scientific-calculator .'
             }

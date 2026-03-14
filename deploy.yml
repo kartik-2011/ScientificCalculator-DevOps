@@ -12,7 +12,7 @@
       name: calculator
       state: stopped
     ignore_errors: yes
-
+ 
   - name: Remove old calculator container
     docker_container:
       name: calculator
