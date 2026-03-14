@@ -45,12 +45,15 @@ pipeline {
 
     }
     post {
-        failure {
-            emailext (
-                subject: "Build Failed: ${env.JOB_NAME}",
-                body: "Something went wrong in build ${env.BUILD_NUMBER}",
-                to: "your-email@gmail.com"
-            )
-        }
+    success {
+        mail to: 'kartikahluwalia2011@gmail.com',
+        subject: 'Build Success',
+        body: 'The Jenkins build was successful.'
     }
+    failure {
+        mail to: 'kartikahluwalia2011@gmail.com',
+        subject: 'Build Failed',
+        body: 'The Jenkins build has failed.'
+    }
+}
 }
