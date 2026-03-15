@@ -10,7 +10,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 git branch: 'main', url: 'https://github.com/kartik-2011/ScientificCalculator-DevOps.git'
-                
+        }
         }
 
         stage('Build this Project') {
